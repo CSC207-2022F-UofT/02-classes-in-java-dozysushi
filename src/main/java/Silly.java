@@ -80,8 +80,14 @@ public class Silly implements Comparable<Silly>{
      *       Make sure you document this method!
      */
 
-    public Silly(String first, String second){this.name = first + second;}
-
+    public Silly(String first, String second) { this.name = first + second; }
+    /**
+     * Creates a new Silly object.
+     * This constructor takes in two Strings as arguments.
+     *
+     * @param first a name for this Silly instance's name.
+     * @param seond a name for this Silly instance's name.
+     */
 
 
 
@@ -117,7 +123,7 @@ public class Silly implements Comparable<Silly>{
         y.countStatic();
         x.countStatic();
         x.countStatic();
-        int[] expected_values = {};
+        int[] expected_values = {1,1,1,1};
 
         System.out.println("The countStatic calls will return " + Arrays.toString(expected_values));
     }
@@ -135,6 +141,7 @@ public class Silly implements Comparable<Silly>{
     @Override
     public String toString(){
         // TODO (Task 3): Implement the body of this method!
+        return Silly.this.name;
     }
 
     /**
